@@ -1,4 +1,4 @@
-function App() {
+const App = () => {
   const items = ['Apple', 'Banana', 'Cherry'];
   const isLoggedIn = true;
 
