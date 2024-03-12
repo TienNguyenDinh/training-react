@@ -5,7 +5,7 @@ interface Item {
   completed: boolean
 }
 
-function App() {
+const App = () => {
   let initialItems = ['Apple', 'Banana', 'Cherry'];
 
   const [items, setItems] = useState<Item[]>(
