@@ -1,13 +1,18 @@
-import { useState } from 'react'
+import { useState } from 'react';
+
+interface Item {
+  name: string,
+  completed: boolean
+}
 
 function App() {
-  const initialItems = ['Apple', 'Banana', 'Cherry'];
+  let initialItems = ['Apple', 'Banana', 'Cherry'];
 
-  const [items, setItems] = useState(
+  const [items, setItems] = useState<Item[]>(
     initialItems.map(item => ({ name: item, completed: false }))
   );
 
-  const handleClick = (index) => {
+  const handleClick = (index: number) => {
     const newItems = [...items];
 
     newItems[index].completed = !newItems[index].completed;
