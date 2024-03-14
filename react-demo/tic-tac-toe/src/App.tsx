@@ -19,20 +19,20 @@ const Square: React.FC<SquareProps> = ({ value, onClick }) => (
   </button>
 );
 
-const getInitSquares = () => {
+const getInitSquares = (length: number) => {
   const initSquares: Square[] = [];
-  for(let i = 1; i <= 9; ++i) {
+  for(let i = 1; i <= length; ++i) {
     initSquares.push({
       id: i,
       value: ''
     });
   }
-
+  console.log(initSquares)
   return initSquares;
 }
 
 const App = () => {
-  const [squares, setSquares] = useState<Array<Square>>(getInitSquares());
+  const [squares, setSquares] = useState<Array<Square>>(() => getInitSquares(9));
   const [isXNext, setIsXNext] = useState<boolean>(true);
 
   const handleClick = (i: number) => {
