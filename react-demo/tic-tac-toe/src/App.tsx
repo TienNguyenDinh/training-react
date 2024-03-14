@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import './App.css';
 
-type SquareValue = 'X' | 'O' | 'null';
+type SquareValue = 'X' | 'O' | '';
+
+interface Square {
+  id: string | number,
+  value: SquareValue
+}
 
 interface SquareProps {
-  value: SquareValue;
-  onClick: () => void;
+  value: SquareValue,
+  onClick: () => void
 }
 
 const Square: React.FC<SquareProps> = ({ value, onClick }) => (
@@ -14,17 +19,29 @@ const Square: React.FC<SquareProps> = ({ value, onClick }) => (
   </button>
 );
 
+const getInitSquares = () => {
+  const initSquares: Square[] = [];
+  for(let i = 1; i <= 9; ++i) {
+    initSquares.push({
+      id: i,
+      value: ''
+    });
+  }
+
+  return initSquares;
+}
+
 const App = () => {
-  const [squares, setSquares] = useState<Array<SquareValue>>(Array(9).fill(''));
+  const [squares, setSquares] = useState<Array<Square>>(getInitSquares());
   const [isXNext, setIsXNext] = useState<boolean>(true);
 
   const handleClick = (i: number) => {
     const squaresCopy = squares.slice();
-    if (squaresCopy[i]) {
+    if (squaresCopy[i].value) {
       return;
     }
-    
-    squaresCopy[i] = isXNext ? 'X' : 'O';
+
+    squaresCopy[i].value = isXNext ? 'X' : 'O';
     setSquares(squaresCopy);
     setIsXNext(!isXNext);
   };
@@ -33,8 +50,8 @@ const App = () => {
     <div className='table-layout'>
       {squares.map((square, i) => (
         <Square
-          key={i}
-          value={square}
+          key={square.id}
+          value={square.value}
           onClick={() => handleClick(i)}
         />
       ))}
