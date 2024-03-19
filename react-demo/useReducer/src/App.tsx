@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { createContext, useContext, useReducer } from 'react';
 import './App.css';
 
 type Type = 'INCREMENT' | 'DECREMENT' | 'RESET';
@@ -24,8 +24,31 @@ const countReducer = (state: number, action: Action) => {
   }
 }
 
+interface CountContextProps {
+  count: number;
+  dispatchCount: React.Dispatch<Action>;
+}
+
+const CountContext = createContext<CountContextProps | null>(null);
+
 const App = () => {
   const [count, dispatchCount] = useReducer(countReducer, 0);
+
+  return (
+    <CountContext.Provider value={{ count, dispatchCount }}>
+      <Counter />
+    </CountContext.Provider>
+  )
+}
+
+const Counter = () => {
+  const context = useContext(CountContext);
+
+  if (!context) {
+    throw new Error('Counter must be used within a CountProvider');
+  }
+
+  const { count, dispatchCount } = context;
 
   return (
     <>
