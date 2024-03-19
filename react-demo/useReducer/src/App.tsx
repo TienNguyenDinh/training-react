@@ -1,15 +1,13 @@
 import { useReducer } from 'react';
 import './App.css';
 
-type Action = 
+type Type = 'INCREMENT' | 'DECREMENT' | 'RESET';
 
-interface Payload {
-  value: number
+interface Action {
+  type: Type
 }
 
 const countReducer = (state: number, action: Action) => {
-  const { payload } = action;
-
   switch(action.type) {
     case 'INCREMENT': {
       return state + 1;
@@ -17,14 +15,11 @@ const countReducer = (state: number, action: Action) => {
     case 'DECREMENT': {
       return state - 1;
     }
-    case 'PLUS': {
-      return state + payload.value;
-    }
-    case 'MINUS': {
-      return state - payload.value;
-    }
     case 'RESET': {
       return 0;
+    }
+    default: {
+      throw new Error('Unknow action!');
     }
   }
 }
@@ -34,6 +29,12 @@ const App = () => {
 
   return (
     <>
+      <p>Count: {count}</p>
+      <div>
+        <button type="button" onClick={() => dispatchCount({ type: 'INCREMENT' })}>Increment</button>
+        <button type="button" onClick={() => dispatchCount({ type: 'DECREMENT' })}>Decrement</button>
+        <button type="button" onClick={() => dispatchCount({ type: 'RESET' })}>Reset</button>
+      </div>
     </>
   )
 }
