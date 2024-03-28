@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "roomName": "101",
+    "price": 150.00,
+    "amenities": ["Wi-Fi", "TV", "Air Conditioning"],
+    "description": "Spacious single room with a breathtaking view of the city, equipped with modern amenities and designed for your comfort.",
+    "roomType": "single",
+    "isAvailable": true,
+    "imageUrl": ""
+  },
+  {
+    "id": 2,
+    "roomName": "102",
+    "price": 200.00,
+    "amenities": ["Wi-Fi", "TV"],
+    "description": "A cozy and quiet double room with a comfortable bed and a high-definition television.",
+    "roomType": "double",
+    "isAvailable": false,
+    "imageUrl": ""
+  },
+  {
+    "id": 3,
+    "roomName": "303",
+    "price": 175.00,
+    "amenities": ["Wi-Fi", "Balcony"],
+    "description": "Elegant room with a private balcony to enjoy the sunset, fully furnished for a perfect holiday stay.",
+    "roomType": "single",
+    "isAvailable": true,
+    "imageUrl": ""
+  },
+  {
+    "id": 4,
+    "roomName": "410",
+    "price": 250.00,
+    "amenities": ["Wi-Fi", "Jacuzzi", "King-sized Bed"],
+    "description": "Luxury double room with a jacuzzi to relax in after a day of exploring, featuring a king-sized bed and premium bedding.",
+    "roomType": "double",
+    "isAvailable": true,
+    "imageUrl": ""
+  },
+  {
+    "id": 5,
+    "roomName": "512",
+    "price": 130.00,
+    "amenities": [],
+    "description": "Affordable single room with essential amenities, ideal for travelers looking for value and comfort.",
+    "roomType": "single",
+    "isAvailable": false,
+    "imageUrl": ""
+  },
+  {
+    "id": 6,
+    "roomName": "602",
+    "price": 220.50,
+    "amenities": ["Wi-Fi", "TV", "Mini-fridge", "Ocean View"],
+    "description": "Luxurious double room with a panoramic ocean view, a mini-fridge stocked with premium beverages.",
+    "roomType": "double",
+    "isAvailable": true,
+    "imageUrl": ""
+  },
+  {
+    "id": 7,
+    "roomName": "701",
+    "price": 199.99,
+    "amenities": ["Wi-Fi", "Ensuite Bathroom"],
+    "description": "Comfortable single room with a large ensuite bathroom and modern fittings. Perfect for business travelers.",
+    "roomType": "single",
+    "isAvailable": false,
+    "imageUrl": ""
+  },
+  {
+    "id": 8,
+    "roomName": "803",
+    "price": 250.00,
+    "amenities": ["Wi-Fi", "Balcony", "Work Desk"],
+    "description": "An ideal room for work and relaxation, with a dedicated work desk, comfortable chair, and a private balcony.",
+    "roomType": "single",
+    "isAvailable": true,
+    "imageUrl": ""
+  },
+  {
+    "id": 9,
+    "roomName": "850",
+    "price": 525.00,
+    "amenities": ["Wi-Fi", "TV", "Spa Bath", "Premium Suite"],
+    "description": "A top-tier suite with a spa bath, premium entertainment system, and breathtaking views of the skyline.",
+    "roomType": "double",
+    "isAvailable": true,
+    "imageUrl": ""
+  },
+  {
+    "id": 10,
+    "roomName": "920",
+    "price": 130.00,
+    "amenities": ["Wi-Fi"],
+    "description": "Basic double room providing exceptional value without compromising on comfort, ideal for budget-conscious visitors.",
+    "roomType": "double",
+    "isAvailable": false,
+    "imageUrl": ""
+  }
+]
