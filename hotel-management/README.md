@@ -23,14 +23,15 @@
 
 ## TECHNICAL STACK
 
-- HTML5/CSS3
-- React 18
-- React-router-dom
-- JavaScript
-- TypeScript
-- Eslint
-- JSON Server
-- Vite
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - HTML5 is the latest evolution of the standard that defines HTML
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) - Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML.
+- [React 18](https://react.dev) - React is a JavaScript-based UI development library. Although React is a library rather than a language, it is widely used in web development.
+- [React-router-dom](https://reactrouter.com/en/main) - React Router is a customizable and flexible routing library for React, enabling navigation among views of various components.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - JavaScript is a lightweight interpreted programming language with first-class functions.
+- [TypeScript](https://www.typescriptlang.org) - TypeScript is an object-oriented programming language developed by Microsoft Corporation, and it is a subset of JavaScript.
+- [Eslint](https://eslint.org) - ESLint is a static code analysis tool for identifying problematic patterns found in JavaScript code.
+- [JSON Server](https://github.com/typicode/json-server) - Full fake REST API with zero coding in less than 30 seconds.
+- [Vite](https://vitejs.dev) - Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects.
 
 ## DESIGN
 
@@ -43,101 +44,7 @@
 
 ## REQUIREMENTS
 
-- Version 1: Basic CRUD Operations (without authentication) [Starting Point]
-  - Home Page:
-    - Header:
-      - User can see the website logo
-      - User can see a list of links (not able to navigate)
-      - User can see an ‘auth’ button
-      - User can click the button, and it will shows the dropdown
-      - If the user didn’t log in: It shows 2 buttons: login and register
-      - If the user logged in: It shows user’s name, user’s role and ‘log out’ button
-- Main:
-  - User can view list of rooms with basic information (room name, price, availability status, room type, room thumbnail)
-  - User can view detail of a room
-    - The images of the room
-    - The details of the room: room name, room previews, price, description, amenities, availability status, room type
-  - User can add a room:
-    - The user can see a "Add Room" button above room list
-    - The user click the "Add Room" button and will be navigated to Add Room Page
-    - The user can enter these fields:
-      - Room Name
-        - It should be a string composed of two parts: the 'Floor Level' followed by the 'Room Order’ (‘5’ + ‘05’ = ‘505’)
-    - Price
-      - It is a positive float value
-    - Amenities (Optional)
-      - User add amenities by clicking checkboxes
-    - Description (Optional)
-      - It should be text with at least 50 characters
-    - Room Type (single, double)
-      - User add Room Type by choosing radio buttons
-    - Availability Status (Available, Unavailable)
-      - User add Availability Status by choosing radio buttons
-    - Images (Optional)
-      - User add a image by add its url
-        - We provide default room images if no images are provided
-    - The user can click submit to create a new room
-    - The user can click cancel to close the form
-  - User can edit a room (all fields are able to modified)
-    - User can see an edit button for the specific room they are hovering on
-    - User can click the edit button and will be navigated to form page
-    - The form will already be pre-filled with the product's existing information that the user wishes to edit
-    - The user can click save to edit the room
-    - The user can click cancel to close the form
-  - User can delete a room
-    - User can see a delete button for the specific room they are hovering on
-    - User can click the delete button and the confirm modal will shows up to confirm if the user want to delete it
-  - User can search for rooms
-    - User can see a search input above the room list
-    - User can enter a query to search for room by
-      - Room Name
-    - User can press enter to submit the search and the new room list will be re-render
-  - User can filter for rooms
-    - User can see a filter selections above the room list by:
-      - Room type
-      - Amenities
-      - Availability Status
-    - User can click any options and the new room list will be re-render
-- Version 2: Authentication and Authorization [Next Phase (if possible)]
-  - User can login
-    - User can see the login page link when click ‘auth’ button
-    - User need to enter these fields:
-      - Email
-      - Password
-    - User can click ‘login’ button to try to login
-  - User can register
-    - User can see the register page link when click ‘auth’ button
-    - User need to enter these fields:
-      - Email
-      - Password
-      - Confirm password
-    - User can click ‘register’ button to try to login
-  - Only allow admin to modify hotel room listings
-  - Pagination for list items
-    - User can see a message that shows something like ‘Paginations or Load on scroll…’
-    - User can scroll the page and the room list will be appended with new rooms
-- Version 3: CRUD for cart [Final Phase (if possible)]
-  - User can view list of rooms in their cart
-    - User can see ‘button’ cart
-    - User can click ‘button’ cart and the modal will show up
-  - User can add a room to cart
-    - User can see ‘add to cart’ button when hover to a room card
-    - User can click the ‘add to cart’ button to add the room to cart
-    - The cart will have these properties
-      - ID
-      - User ID
-      - Room ID
-      - Number of Nights (default=1, user can edit later)
-      - Booking Date (default=now)
-  - User can edit a room in their cart
-    - User can see the increment/decrement button to modify the Night they will stay
-    - User can click the button to modify the Night
-  - User can delete a room in their cart
-    - User can see the a button to delete a room beside it
-    - User can click a button to delete a room
-    - User will see a confirm modal to ask if they ensure to delete a room
-      - User click Sure to delete the room
-      - User click cancel to close the form
+- [My Requirements](https://docs.google.com/document/d/1q2POcQAJleoKG9nD43pJci07Y4QRUmlfrqZxCqXMv2Y/edit#heading=h.1t3h5sf)
 
 ## GETTING STARTED
 
