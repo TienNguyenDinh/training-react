@@ -49,7 +49,7 @@
       - User can see the website logo
       - User can see a list of links (not able to navigate)
       - User can see an ‘auth’ button
-      - User can click the button, and it will shows the dropdown 
+      - User can click the button, and it will shows the dropdown
       - If the user didn’t log in: It shows 2 buttons: login and register
       - If the user logged in: It shows user’s name, user’s role and ‘log out’ button
 - Main:
