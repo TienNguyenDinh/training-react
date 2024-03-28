@@ -1,5 +1,5 @@
-[
-  {
+{
+  "rooms": [{
     "id": 1,
     "roomName": "101",
     "price": 150.00,
@@ -98,5 +98,5 @@
     "roomType": "double",
     "isAvailable": false,
     "imageUrl": ""
-  }
-]
+  }]
+}
